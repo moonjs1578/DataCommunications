@@ -161,15 +161,27 @@
   - 즉, 각 계층은 자신이 맡은 기능을 수행하고, 상위 계층은 하위 계층 기능을 활용해 통신을 수행합니다.  
 
 ### Layers in the TCP/IP Protocol Suite
-- Layer 5 : Application
-- Layer 4 : Transport
-- Layer 3 : Network
-- Layer 2 : Data link
-- Layer 1 : Physical
+- Layer 5 : **Application**
+   - 응용 계층(Application Layer)에서의 통신은 두 프로세스(Process) 간에 이루어지며, 여기서 프로세스란 이 계층에서 실행 중인 두 개의 프로그램을 의미한다.
+   - 통신을 위해, 한 프로세스(Process)는 다른 프로세스에 요청(Request)을 보낸다. 응답(Response)을 받는다.
+   - 프로세스 간(Process-to-Process) 통신은 응용 계층(Application Layer)의 책임이다.
+- Layer 4 : **Transport**
+   - 응용 계층(Application Layer)에 서비스를 제공하는 역할을 담당한다.
+   - 송신 호스트(Source Host)에서 실행 중인 응용 프로그램(Application Program)으로부터 메시지를 받아, 수신 호스트(Destination Host)에서 실행 중인 해당 응용 프로그램으로 전달하는 것
+- Layer 3 : **Network**
+   - 패킷(Packet)을 송신 호스트(Source Host)에서 수신 호스트(Destination Host)까지 전달하는 역할을 담당한다.
+   - 송신지(Source)와 목적지(Destination) 사이에 (논리적) 연결(Logical Connection)을 생성함으로써
+- Layer 2 : **Data link**
+   - 프레임(Frame)을 한 노드(Node)에서 다음 노드로 전달하는 역할을 담당한다.
+- Layer 1 : **Physical**
+   - 프레임(Frame) 내 개별 비트(Bit)를 링크(Link)를 통해 전달하는 역할을 담당한다.
+
 - 계층을 통과할 때마다 더 큰 봉투에 담아서 줌
 
-## 1.6 The OSI Model
-- OSI(Open Systems Interconnection)
-- ISO is the organization
-- OSI is the model
+## 2️⃣ The OSI Model
 
+### OSI vs TCP/IP
+- **OSI**는 7계층으로 구성: Application, Presentation, Session, Transport, Network, Data Link, Physical  
+
+- **OSI (Open Systems Interconnection)** : 통신 시스템 간 상호연결을 위한 모델  
+- **ISO** : OSI 모델을 정의한 국제 표준화 기구
